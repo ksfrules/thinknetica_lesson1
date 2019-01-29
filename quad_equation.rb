@@ -8,10 +8,13 @@ puts "Please, enter koef_c"
 koef_c = gets.chomp.to_i 
 
 discriminant = koef_b ** 2 - 4 * koef_a * koef_c
+
+
 if discriminant < 0
   puts "Discriminant  = #{discriminant}, no roots"
 elsif discriminant == 0
   puts "Discriminant  = #{discriminant}, one root X1 = X2 = #{-koef_b / 2 / koef_a}"
 else
-  puts "Discriminant  = #{discriminant}, first root X1 = #{(Math.sqrt(discriminant)-koef_b) / 2 / koef_a}, second root X2 = #{(- Math.sqrt(discriminant)-koef_b) / 2 / koef_a}"
+  srqt_discriminant = Math.sqrt(discriminant)
+  puts "Discriminant  = #{discriminant}, first root X1 = #{(srqt_discriminant-koef_b) / 2 / koef_a}, second root X2 = #{(- srqt_discriminant-koef_b) / 2 / koef_a}"
 end

@@ -2,10 +2,12 @@ puts "Please, enter your name"
 name = gets.chomp
 
 puts "Please, enter your height"
-height = gets.chomp
+height = gets.chomp.to_i
 
-if (height.to_i - 110) >= 0
-  puts "Dear #{name}, your ideal weight is #{height.to_i - 110} kg"
+ideal_weight = height - 110
+
+if (ideal_weight) >= 0
+  puts "Dear #{name}, your ideal weight is #{ideal_weight} kg"
 else
   puts "Dear #{name}, Your weight is already optimal"
 end 
